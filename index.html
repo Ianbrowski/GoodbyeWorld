@@ -54,8 +54,23 @@
 </div>
     </div>
 </div>
-
+<button class="music" id="playButton">Play Music</button>
+  <audio id="music" src="img/bg.mp3" type="audio/mpeg" autoplay>
+    Your browser does not support the audio element.
+  </audio>
 <script>
+     const playButton = document.getElementById('playButton');
+    const music = document.getElementById('music');
+
+    playButton.addEventListener('click', () => {
+      if (music.paused) {
+        music.play();
+        playButton.textContent = 'Pause Music';
+      } else {
+        music.pause();
+        playButton.textContent = 'Play Music';
+      }
+    });
     function redirectToNextPage() {
         window.location.href = 'nigga.html'; // Redirect to 'nigga.html'
     }
