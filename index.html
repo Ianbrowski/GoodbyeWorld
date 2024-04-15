@@ -19,7 +19,7 @@
         <div class="login-header">
             <span>Login</span>
         </div>
-        <form id="login-form">
+        <form id="login-form" onsubmit="login(event)">
             <div class="input_box">
                 <input type="text" id="user" class="input-field" required>
                 <label for="user" class="label">Username</label>
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="input_box">
-                <input type="submit" class="input-submit" value="Login">
+                <input type="button" onclick="redirectToNextPage()" class="input-submit" value="Login">
             </div>
             <div class="register">
                 <span>Don't have an account? <a href="register.html">Register</a></span>
@@ -56,6 +56,10 @@
 </div>
 
 <script>
+    function redirectToNextPage() {
+        window.location.href = 'nigga.html'; // Redirect to 'nigga.html'
+    }
+
     window.addEventListener("load", () => {
         const loader = document.querySelector(".loader-wrapper");
         loader.classList.add("hidden");
