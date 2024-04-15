@@ -205,3 +205,8 @@ header{
 .hidden {
     display: none; /* Hide the loader when content is loaded */
 }
+.music{
+  float: right;
+  padding:  10px;
+  background-color: red;
+}
