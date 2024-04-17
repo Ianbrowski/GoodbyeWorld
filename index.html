@@ -6,9 +6,11 @@
     <title>Login Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
 
-<header><h1>Goodbye<span class="slash"></span><span class="world">World</span></h1> </header>
+<header><h1><span class="hed">Goodbye</span> <span class="world">World</span></h1> </header>
 
 <div class="loader-wrapper">
     <div class="loader"></div>
@@ -36,7 +38,7 @@
                     <label for="remember">Remember me</label>
                 </div>
                 <div class="forgot">
-                   <a href="#" class="forgot-password-link">Forgot password?</a>
+                   <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran" class="forgot-password-link">Forgot password?</a>
                 </div>
             </div>
             <div class="input_box">
@@ -51,26 +53,35 @@
         <a href="https://www.instagram.com"><img src="img/ig.png" alt="Instagram"></a>
         <a href="https://mail.google.com"><img src="img/email.png" alt="Gmail"></a>
     </div>
+    <button class="music" id="playButton">play</button>
+<audio id="music" src="img/bg.mp3" type="audio/mpeg" >
+  Your browser does not support the audio element.
+</audio>
+  
 </div>
     </div>
 </div>
-<button class="music" id="playButton">Play Music</button>
-  <audio id="music" src="img/bg.mp3" type="audio/mpeg" autoplay>
-    Your browser does not support the audio element.
-  </audio>
-<script>
-     const playButton = document.getElementById('playButton');
-    const music = document.getElementById('music');
 
-    playButton.addEventListener('click', () => {
-      if (music.paused) {
-        music.play();
-        playButton.textContent = 'Pause Music';
-      } else {
-        music.pause();
-        playButton.textContent = 'Play Music';
-      }
-    });
+
+<footer>
+  <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+</footer>
+
+
+<script>
+const playButton = document.getElementById('playButton');
+const music = document.getElementById('music');
+
+playButton.addEventListener('click', () => {
+  if (music.paused) {
+    music.play();
+    playButton.textContent = '<';
+  } else {
+    music.pause();
+    music.currentTime = 0;
+    playButton.textContent = 'x';
+  }
+});
     function redirectToNextPage() {
         window.location.href = 'nigga.html'; // Redirect to 'nigga.html'
     }
